@@ -1,0 +1,326 @@
+:root {
+  --royal-blue: #123A9A; /* Main brand colour / Homepage hero */
+  --yellow: #F8C400; /* Highlights, buttons, word "Spark", nav hover */
+  --white: #FFFFFF; /* Page backgrounds and text on dark backgrounds */
+  --dark-navy: #101F64; /* Header, footer, strong headings, button text */
+  --text-body: #1E293B; /* Dark readable text for white page background */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white); /* Main page background White */
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* 2. Header & Navigation */
+.navbar {
+  background-color: var(--dark-navy); /* Header Dark Navy */
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 4px solid var(--yellow);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--white); /* Logo text White */
+}
+
+.logo .spark-word {
+  color: var(--yellow); /* Word "Spark" Yellow */
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--white); /* Navigation links White */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--yellow); /* Navigation hover Yellow */
+}
+
+.nav-links .btn-youtube {
+  background-color: var(--yellow); /* Buttons Yellow */
+  color: var(--dark-navy); /* Button text Dark Navy */
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-links .btn-youtube:hover {
+  color: var(--dark-navy);
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* 3. Homepage Hero Section */
+.hero {
+  background-color: var(--royal-blue); /* Homepage hero Royal Blue */
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 65px 8%;
+  border-bottom: 6px solid var(--yellow);
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.badge {
+  background-color: rgba(248, 196, 0, 0.15);
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.hero-text h1 {
+  color: var(--white); /* Main heading White */
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: var(--white); /* Paragraph White */
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: var(--yellow); /* Buttons Yellow */
+  color: var(--dark-navy); /* Button text Dark Navy */
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--yellow); /* Buttons Yellow */
+  color: var(--dark-navy); /* Button text Dark Navy */
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  width: 520px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 16px;
+  border: 4px solid var(--yellow);
+  box-shadow: 0 12px 30px rgba(16, 31, 100, 0.35);
+}
+
+/* 4. Explore & Discover Section */
+.pillars-section {
+  background-color: var(--white); /* Main page background White */
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.pillars-section h2 {
+  color: var(--dark-navy); /* Strong headings Dark Navy */
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: var(--royal-blue);
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 30px 25px;
+  border-radius: 14px;
+  border: 2px solid #E2E8F0;
+  border-top: 6px solid var(--royal-blue);
+  box-shadow: 0 6px 20px rgba(16, 31, 100, 0.06);
+  transition: transform 0.25s ease, border-top-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-top-color: var(--yellow);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--dark-navy); /* Strong headings Dark Navy */
+  margin-bottom: 10px;
+}
+
+/* 5. Mission & Founder Section */
+.mission-section {
+  background-color: var(--white); /* Main page background White */
+  padding: 20px 8% 70px;
+}
+
+.mission-box {
+  background-color: var(--white);
+  border: 2px solid #E2E8F0;
+  border-left: 8px solid var(--yellow);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(16, 31, 100, 0.06);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-box h2 {
+  color: var(--dark-navy); /* Strong headings Dark Navy */
+  margin-bottom: 15px;
+}
+
+.mission-box p {
+  font-size: 1.15rem;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.founder-tag {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.founder-tag img {
+  width: 50px;
+  height: 50px;
+}
+
+.founder-tag strong {
+  display: block;
+  color: var(--dark-navy);
+  font-size: 1.1rem;
+}
+
+.founder-tag span {
+  color: var(--royal-blue);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* 6. Footer */
+footer {
+  background-color: var(--dark-navy); /* Footer Dark Navy */
+  color: var(--white);
+  text-align: center;
+  padding: 32px 8%;
+  border-top: 4px solid var(--yellow);
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+footer a {
+  color: var(--yellow);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 7. Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
